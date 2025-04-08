@@ -12,8 +12,6 @@ mongoose.connect(process.env.MONGO_URL)
   .then(async () => {
     console.log('MongoDB Connected');
     await GeoData.insertMany(mockData.mockGeographyData)
-    await TransactionData.insertMany(mockData.mockTransactions)
-    await LineData.insertMany(mockData.mockLineData)
     console.log('Data Inserted Successfully');
     process.exit();
   })
